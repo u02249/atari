@@ -1,0 +1,14 @@
+
+upstream apps { 
+{% for item in groups.app %}
+{% if hostvars[item].placement == placement %}
+        server http://{{ hostvars[item].ansible_ssh_host }};
+{% endif %}
+{% endfor %}
+    }
+    server { 
+    listen 80;
+    location / { 
+        proxy_pass http://apps; 
+    }
+ }

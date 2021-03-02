@@ -1,0 +1,22 @@
+---
+instances: 
+  - name: app 
+    subnets: 
+      - subnet: 'subnet-be9ed6f2' 
+        seq_num: '01' 
+      - subnet: 'subnet-be9ed6f2' 
+        seq_num: '02' 
+      - subnet: 'subnet-bd9272c0' 
+        seq_num: '03' 
+      - subnet: 'subnet-bd9272c0' 
+        seq_num: '04' 
+      - subnet: 'subnet-0f07ac64' 
+        seq_num: '05'
+  - name: web 
+    subnets: 
+      - subnet: 'subnet-be9ed6f2' 
+        seq_num: '01' 
+        assign_public_ip: true 
+      - subnet: 'subnet-bd9272c0' 
+        seq_num: '02' 
+        assign_public_ip: true
